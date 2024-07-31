@@ -1,5 +1,5 @@
 import { test, expect,chromium } from '@playwright/test';
-import {getOrder} from '../db/EcommerceQueries';
+import {getOrder} from '../db/EcommerceQueries.ts';
 //import {ElementController} from '../utils/ElementController'
 
 test.describe('Suite de pruebas', () => {
