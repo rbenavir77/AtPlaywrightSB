@@ -44,7 +44,6 @@ test('test Usuario invitado WPD', async ({ page }) => {
   await page.locator('//button[contains(text(),"Continuar")]').click();
   await page.locator('//button[contains(text(),"Continuar")]').click();
   await page.locator('//button[contains(text(),"Continuar")]').click();
-  
   await page.getByRole('tab', { name: 'Retiro en tienda' }).click();
   await page.locator('.radio-circle').first().click();
   await page.getByRole('button', { name: 'Continuar a medios de pago' }).click();

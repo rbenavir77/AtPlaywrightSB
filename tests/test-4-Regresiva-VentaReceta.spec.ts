@@ -41,17 +41,12 @@ test('Test Con receta', async ({ page }) => {
   await page.getByRole('link', { name: 'Ir a Pagar' }).click();
   await page.getByRole('button', { name: 'Continuar' }).click();
   await page.setInputFiles('input[type="file"]', filePath);
-  await page.getByRole('button', { name: 'Continuar' }).click();
+  await page.click('button:has-text("Continuar")');
   await page.getByRole('tab', { name: 'Despacho a domicilio' }).click();
   await page.getByRole('button', { name: 'Continuar a medios de pago' }).click();
   await page.getByRole('button', { name: 'WebPay method Redcompra /' }).click();
   await page.click('input[name="tos"]');
   await page.getByRole('button', { name: 'Realizar pago' }).click();
-  await page.goto('https://staging2.salcobrandonline.cl/webpay_ws_mall?action=update&controller=spree%2Fapi%2Fv2%2Fcheckouts');
-  await page.goto('https://webpay3gint.transbank.cl/webpayserver/init_transaction.cgi');
-  await page.goto('https://webpay3gint.transbank.cl/webpayserver/dist/index.html');
-  await page.goto('https://webpay3gint.transbank.cl/webpayserver/dist/#/');
-  //await page.click('input[name="tos"]'); buscar el input del boton reqliao
   await page.getByRole('button', { name: 'Débito' }).click();
   await page.getByRole('button', { name: 'Banco Selecciona tu banco' }).click();
   await page.getByRole('button', { name: 'TEST COMMERCE BANK' }).click();
