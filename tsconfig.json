@@ -11,7 +11,10 @@
     "baseUrl": ".",
     "paths": {
       "*": ["db/*", "tests/*"]
-    }
+    },
+    "types": ["@types/node", "@playwright/test"],
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   },
   "include": ["db/**/*", "tests/**/*", "playwright.config.ts"],
   "exclude": ["node_modules", "dist"]
